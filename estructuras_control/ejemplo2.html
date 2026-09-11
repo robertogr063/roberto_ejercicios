@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Con array
+        let numeros = [];
+        for(let i = 0; i<5; i++){
+            numeros[i] = prompt('Introduce el número ' + (i+1));
+        }
+        let mayor = 0;
+        let posicion;
+        for(let i = 0; i<numeros.length; i++){
+            if(mayor<numeros[i]){
+                mayor = numeros[i];
+                posicion = i;
+            }
+        }
+        alert('El mayor es: ' + mayor + ' y la posición es: ' + posicion);
+        */
+       //Sin array
+
+       let mayor = 0;
+       let posicion;
+
+       let numero1 = prompt('Introduce el número 1');
+        if (mayor<numero1){
+            mayor = numero1;
+            posicion = 0;
+        }
+
+       let numero2 = prompt('Introduce el número 2');
+       if (mayor<numero2){
+            mayor = numero2;
+            posicion = 1;
+        }
+       let numero3 = prompt('Introduce el número 3');
+       if (mayor<numero3){
+            mayor = numero3;
+            posicion = 2;
+        }
+       let numero4 = prompt('Introduce el número 4');
+       if (mayor<numero4){
+            mayor = numero4;
+            posicion = 3;
+        }
+       let numero5 = prompt('Introduce el número 5');
+       if (mayor<numero5){
+            mayor = numero5;
+            posicion = 4;
+        }
+        alert('El mayor es: ' + mayor + ' y la posición es: ' + posicion);
+
+
+    </script>
+    
+</body>
+</html>
