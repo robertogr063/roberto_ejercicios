@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*En una frutería hay tres tipos de frutas, con diferente precio por kilo. Tanto el precio por kilo, 
+    como el nombre de la fruta se piden al usuario mediante prompt. Este usuario sería el empresario y luego tendremos al cliente.
+    La cantidad disponible de cada fruta es una variable dentro del programa ( no se pregunta )
+    Al iniciar se me muestran los tipos de frutas disponibles, la cantidad que hay actualmente y el precio por kilo.
+    Al cliente se le pregunta que fruta quiere y cuanta. Se muestra el total a cobrar. Si no hay suficiente fruta, 
+    se le dice que no se tiene suficiente y no se le cobra.*/
+        let fruta1 = {
+            nombre: prompt('Introduce el nombre de la fruta número 1'),
+            precio: Number(prompt('Introduce el precio por kilo de la fruta número 1')),
+            cantidad: 2
+        }
+        let fruta2 = {
+            nombre: prompt('Introduce el nombre de la fruta número 2'),
+            precio: Number(prompt('Introduce el precio por kilo de la fruta número 2')),
+            cantidad: 5
+        }
+        let fruta3 = {
+            nombre: prompt('Introduce el nombre de la fruta número 3'),
+            precio: Number(prompt('Introduce el precio por kilo de la fruta número 3')),
+            cantidad: 1
+        }
+
+        alert(`Fruta 1: Nombre: ${fruta1.nombre}, Precio por Kilo: ${fruta1.precio}, Cantidad: ${fruta1.cantidad}`);
+        alert(`Fruta 2: Nombre: ${fruta2.nombre}, Precio por Kilo: ${fruta2.precio}, Cantidad: ${fruta2.cantidad}`);
+        alert(`Fruta 3: Nombre: ${fruta3.nombre}, Precio por Kilo: ${fruta3.precio}, Cantidad: ${fruta3.cantidad}`);
+
+        let nombreFruta = prompt('Introduce el nombre de la fruta a comprar');
+        let cantidadComprar  = Number(prompt('Introduce la cantidad que quieres comprar'));
+        console.log(cantidadComprar);
+        let precioFruta;
+        let cantidadFruta;
+        if(nombreFruta == fruta1.nombre){
+            precioFruta = fruta1.precio;
+            cantidadFruta = fruta1.cantidad;
+            
+        } else if(nombreFruta == fruta2.nombre){
+            precioFruta = fruta2.precio;
+            cantidadFruta = fruta2.cantidad;
+        } else if(nombreFruta == fruta3.nombre){
+            precioFruta = fruta3.precio;
+            cantidadFruta = fruta3.cantidad;
+        } else{
+            alert('Esa fruta no está registrada');
+        }
+        if(cantidadComprar<=cantidadFruta){
+            console.log(precioFruta);
+            alert(`Tienes que pagar un total de ${parseFloat(precioFruta)*cantidadComprar} €`);
+        } else{
+            alert('No hay suficiente fruta');
+        }
+
+        
+        
+    </script>
+</body>
+</html>

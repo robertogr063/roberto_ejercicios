@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Vamos a hacer un programa para jugar a priedra-papel-tijera.
+        El programa pide por prompt que ha sacado cada jugador. Por ejemplo, jugador 1: papel, jugador 2: tijera.
+        El programa nos dice si ha ganado alguien.*/
+        let jugador1 = prompt('Opción del jugador 1 ');
+        let jugador2 = prompt('Opción del jugador 2 ');
+
+        if (jugador1 == 'piedra' && jugador2 == 'tijeras' ||
+            jugador1 == 'tijeras' && jugador2 == 'papel' ||
+            jugador1 == 'papel' && jugador2 == 'piedra') {
+            alert('Ha gandado el jugador 1');
+        } else if (jugador1 == jugador2){
+            alert('Empate');
+        } else{
+            alert('Ha ganado el jugador 2');
+        }
+    </script>
+</body>
+
+</html>

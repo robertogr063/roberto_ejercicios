@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Vamos a hacer un programa para jugar a los chinos.
+        El programa pide por prompt la configuración de las monedas que tienen escondidas cada jugador.
+        Después pide por teclado que cada jugador adivine cuantas monedas hay en total.
+        Finalmente me dice quien ha ganado. Puede haber varios ganadores.*/
+
+        let monedasJugador1 = Number(prompt('¿Cuantas monedas tiene el jugador 1?'));
+        let monedasJugador2 = Number(prompt('¿Cuantas monedas tiene el jugador 2?'));
+        let monedasJugador3 = Number(prompt('¿Cuantas monedas tiene el jugador 3?'));
+        let monedasJugador4 = Number(prompt('¿Cuantas monedas tiene el jugador 4?'));
+
+        let totalMonedas = monedasJugador1+monedasJugador2+monedasJugador3+monedasJugador4;
+
+        let opcionJugador1 = Number(prompt('Turno del jugador 1'));
+        let opcionJugador2 = Number(prompt('Turno del jugador 2'));
+        let opcionJugador3 = Number(prompt('Turno del jugador 3'));
+        let opcionJugador4 = Number(prompt('Turno del jugador 4'));
+
+        let ganadores = '';
+        if (opcionJugador1 == totalMonedas){
+            ganadores+='Jugador 1,';
+        }
+        if (opcionJugador2 == totalMonedas){
+            ganadores+='Jugador 2,';
+        }
+        if (opcionJugador3 == totalMonedas){
+            ganadores+='Jugador 3,';
+        }
+        if (opcionJugador4 == totalMonedas){
+            ganadores+='Jugador 4,';
+        }
+        if (ganadores != ''){
+            alert('Ganadores: ' + ganadores.substring(0, ganadores.length-1));
+        } else{
+            alert('Nadie ha ganado');
+        }
+
+    </script>
+</body>
+</html>
