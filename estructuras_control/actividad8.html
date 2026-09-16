@@ -7,11 +7,19 @@
 </head>
 <body>
     <script>
-        /*Crea un programa que adivine un numero introducido al iniciar el programa.
-        El usuario tiene 5 oportunidades.
-        Si repite el numero el programa nos avisa que eso ya lo dijimos*/
+        let a = prompt('Introduce el valor de a');
+        let b = prompt('Introduce el valor de b');
 
-        
+        if(a>b){
+            alert('El mayor es A');
+        } else{
+            if(a==b){
+                alert('Son iguales');
+            } else{
+                alert('El mayor es B');
+            }
+        }
+
     </script>
 </body>
 </html>

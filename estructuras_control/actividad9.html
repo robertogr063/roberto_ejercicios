@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Crea un programa que adivine un numero introducido al iniciar el programa.
+          El usuario tiene 5 oportunidades.
+          Si repite el numero el programa nos avisa que eso ya lo dijimos.*/
+
+          let numero = prompt('Introduce el número');
+            let intento1 = prompt('Primer intento');
+            if (numero == intento1) {
+                alert('Has ganado');
+            } else {
+                let intento2 = prompt('Segundo intento');
+                if (intento2 == numero) {
+                    alert('Has ganado');
+                } else {
+                    if (intento1 == intento2) {
+                        alert('Ya has introducido ese número');
+                    }
+                    let intento3 = prompt('Tercer intento');
+                    if (intento3 == numero) {
+                        alert('Has ganado');
+                    } else {
+                        if (intento2 == intento3){
+                            alert('Ya has introducido ese número');
+                        }
+                        let intento4 = prompt('Cuarto intento');
+                        if (intento4 == numero){
+                            alert('Has ganado');
+                        } else{
+                            if (intento3 == intento4){
+                                alert('Ya has introducido ese número');
+                            }
+                            let intento5 = prompt('Quinto intento');
+                            if(intento5 == numero){
+                                alert('Has ganado');
+                            } else{
+                                if(intento4 == intento5){
+                                    alert('Ya has introducido ese número');
+                                }
+                            }
+                        }
+                        
+                    
+                    }
+
+                }
+            }
+    </script>
+</body>
+</html>
