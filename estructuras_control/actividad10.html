@@ -9,25 +9,24 @@
     <script>
         /*Modifica el ejercicio 2 para que se compruebe si existen números que son iguales. 
         Al introducir un numero que ya estaba se le comunica al usuario, pero ya se queda como introducido.
-        Al finalizar el programa se indica que numero es el mayor y si se introdujeron números iguales, en cuyo caso el programa escribiría: "El segundo y el primero son iguales". Ten en cuenta que puede haber varios numeros iguales o parejas de numeros iguales.
+        Al finalizar el programa se indica que numero es el mayor y si se introdujeron números iguales, 
+        en cuyo caso el programa escribiría: "El segundo y el primero son iguales". 
+        Ten en cuenta que puede haber varios numeros iguales o parejas de numeros iguales.
         Puedes usar bucles, pero no arrays.
         */
        //Sin array
 
        let mayor = 0;
-       let posicion;
        let iguales = '';
 
        let numero1 = prompt('Introduce el número 1');
         if (mayor<numero1){
             mayor = numero1;
-            posicion = 0;
         }
 
        let numero2 = prompt('Introduce el número 2');
        if (mayor < numero2) {
             mayor = numero2;
-            posicion = 1;
 
         }
         if (numero2 == numero1) {
@@ -36,7 +35,6 @@
         let numero3 = prompt('Introduce el número 3');
         if (mayor < numero3) {
             mayor = numero3;
-            posicion = 2;
         }
         if (numero3 == numero1) {
             iguales += 'primero y tercero,';
@@ -47,7 +45,6 @@
         let numero4 = prompt('Introduce el número 4');
         if (mayor < numero4) {
             mayor = numero4;
-            posicion = 3;
         }
         if (numero4 == numero1) {
             iguales += 'primero y cuarto,';
@@ -61,7 +58,6 @@
         let numero5 = prompt('Introduce el número 5');
         if (mayor < numero5) {
             mayor = numero5;
-            posicion = 4;
         }
         if (numero5 == numero1) {
             iguales += 'primero y quinto,';
