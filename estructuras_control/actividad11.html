@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Vamos a hacer un programa para jugar a los chinos.
+        El programa pide por prompt la configuración de las monedas que tienen escondidas cada jugador.
+        Después pide por teclado que cada jugador adivine cuantas monedas hay en total.
+        Finalmente me dice quien ha ganado. Puede haber varios ganadores.*/
+        let nombreJugador1 = prompt('¿Cual es el nombre del jugador 1?');
+        let monedasJugador1 = Number(prompt('¿Cuantas monedas tiene el jugador 1?'));
+
+        let nombreJugador2 = prompt('¿Cual es el nombre del jugador 2?');
+        let monedasJugador2 = Number(prompt('¿Cuantas monedas tiene el jugador 2?'));
+
+        let nombreJugador3 = prompt('¿Cual es el nombre del jugador 3?');
+        let monedasJugador3 = Number(prompt('¿Cuantas monedas tiene el jugador 3?'));
+
+        let nombreJugador4 = prompt('¿Cual es el nombre del jugador 4?');
+        let monedasJugador4 = Number(prompt('¿Cuantas monedas tiene el jugador 4?'));
+
+        let totalMonedas = monedasJugador1+monedasJugador2+monedasJugador3+monedasJugador4;
+
+        let opcionJugador1 = Number(prompt('Turno de ' + nombreJugador1));
+        let opcionJugador2 = Number(prompt('Turno de ' + nombreJugador2));
+        if(opcionJugador2 == opcionJugador1){
+            alert('Ya han sacado esa opción');
+            opcionJugador2 = -1;
+        }
+        let opcionJugador3 = Number(prompt('Turno de ' + nombreJugador3));
+        if(opcionJugador3 == opcionJugador1 || opcionJugador3 == opcionJugador2){
+            alert('Ya han sacado esa opción');
+            opcionJugador3 = -1;
+        }
+        let opcionJugador4 = Number(prompt('Turno de ' + nombreJugador4));
+        if(opcionJugador4 == opcionJugador1 || opcionJugador4 == opcionJugador2 || opcionJugador4 == opcionJugador3){
+            alert('Ya han sacado esa opción');
+            opcionJugador4 = -1;
+        }
+
+        let ganador;
+        if (opcionJugador1 == totalMonedas){
+            ganador = nombreJugador1;
+        } else if (opcionJugador2 == totalMonedas){
+            ganador = nombreJugador2;
+        } else if (opcionJugador3 == totalMonedas){
+            ganador = nombreJugador3;
+        } else if (opcionJugador4 == totalMonedas){
+            ganador = nombreJugador4;
+        }
+        alert((ganador != null) ? "El ganador es: " + ganador : "Nadie ha ganado");
+
+    </script>
+</body>
+</html>
