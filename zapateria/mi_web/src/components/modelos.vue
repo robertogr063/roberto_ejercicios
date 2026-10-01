@@ -8,4 +8,25 @@
     </div>
   </section>
 </template>
-<style scoped>.modelos { max-width:1100px; margin:auto; padding:70px 24px; text-align:center; } .rejilla { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; } article { background:#eff6ff; border-radius:12px; padding:24px; text-align:left; }</style>
+<style
+  scoped>
+  .modelos {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 24px;
+    text-align: center;
+  }
+
+  .rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  article {
+    background: #eff6ff;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+  }
+</style>

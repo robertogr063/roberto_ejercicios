@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Los profesores del departamento de ingles tienen un poco de lio con las calificaciones y nos han pedido que hagamos un script
+         para saber si un alumno está aprobado o suspenso. 
+Ellos hacen tres exámenes por trimestre. Como la primera evaluación es mas fácil que la segunda y la segunda mas que la tercera,
+ para aprobar la primera evaluación se debe sacar un 70/100, para la segunda 60/100 y para la tercera 50/100. 
+Se deben aprobar todos los exámenes y todas las evaluaciones. 
+Además existe una recuperación de cada evaluación, que se aprueba con un 50/100. 
+Crea un programa que introduciendo las notas de cada prueba nos diga si el alumno está aprobado o no.
+Las recuperaciones también ser introducen siempre. En caso de no ser necesario hacerlas se les pone un cero.
+Pide todos los datos por argumentos.*/
+
+        //Media de la primera evaluación
+        let notasPrimeraEvaluacion = [];
+        let mediaPrimeraEvaluacion = 0;
+        let primeraEvaluacionAprobada = true;
+        for(let i = 0; i<3; i++){
+            let nota = parseFloat(prompt(`Introduce la nota número ${i+1} de la primera evaluación`));
+            notasPrimeraEvaluacion[i] = nota;
+            mediaPrimeraEvaluacion+=nota;
+            if(nota<5){
+                primeraEvaluacionAprobada = false;
+            }
+        }
+        mediaPrimeraEvaluacion = parseFloat(mediaPrimeraEvaluacion/3);
+        if(mediaPrimeraEvaluacion<7){
+            primeraEvaluacionAprobada = false;
+        }
+        console.log(notasPrimeraEvaluacion);
+        console.log(mediaPrimeraEvaluacion);
+        alert((primeraEvaluacionAprobada) ? 'Has aprobado la primera evaluación' : 'Has suspendido la primera evaluación');
+
+             
+
+        //Media de la segunda evaluación
+        let notasSegundaEvaluacion = [];
+        let mediaSegundaEvaluacion = 0;
+        let segundaEvaluacionAprobada = false;
+        for(let i = 0; i<3; i++){
+            let nota = parseFloat(prompt(`Introduce la nota número ${i+1} de la segunda evaluación`));
+            notasSegundaEvaluacion[i] = nota;
+            mediaSegundaEvaluacion+=nota;
+            if(nota<5){
+                primeraEvaluacionAprobada = false;
+            }
+
+        }
+        mediaSegundaEvaluacion = mediaSegundaEvaluacion/3;
+        if(mediaSegundaEvaluacion<6){
+            segundaEvaluacionAprobada = false;
+        }
+        console.log(notasSegundaEvaluacion);
+        console.log(mediaSegundaEvaluacion);
+        alert((segundaEvaluacionAprobada) ? 'Has aprobado la segunda evaluación' : 'Has suspendido la segunda evaluación');
+        //Media de la tercera evaluación
+        let notasTerceraEvaluacion = [];
+        let mediaTerceraEvaluacion = 0;
+        let terceraEvaluacionAprobada = false;
+        for(let i = 0; i<3; i++){
+            let nota = parseFloat(prompt(`Introduce la nota número ${i+1} de la tercera evaluación`));
+            notasTerceraEvaluacion[i] = nota;
+            mediaTerceraEvaluacion+=nota;
+            if(nota<5){
+                terceraEvaluacionAprobada = false;
+            }
+        }
+        mediaTerceraEvaluacion = mediaTerceraEvaluacion/3;
+        if(mediaTerceraEvaluacion<5){
+            terceraEvaluacionAprobada = false;
+        }
+        console.log(notasTerceraEvaluacion);
+        console.log(mediaTerceraEvaluacion);
+        alert((terceraEvaluacionAprobada) ? 'Has aprobado la tercera evaluación' : 'Has suspendido la tercera evaluación');
+       
+    </script>
+</body>
+</html>
