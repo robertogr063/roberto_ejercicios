@@ -16,7 +16,7 @@
           class = "cliclable"
           @click="mostrarDetalle = true">
   </section>
-    <Detalle :visible="mostrarDetalle" @cerrar="mostrarDetalle"></Detalle>
+    <Detalle :visible="mostrarDetalle" @cerrar="mostrarDetalle = false"></Detalle>
 </template>
 <style scoped>
 .hero { display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:1100px; margin:auto; padding:24px; }

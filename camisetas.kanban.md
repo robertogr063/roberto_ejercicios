@@ -6,20 +6,8 @@
 
 ## To Do
 
-### 2DAW
-
-#### Catalogo
-<!-- id: task-1790767536875-0 -->
-Muestra el frontal de 6 camisetas
-- [ ] Cards para las fotos de las camisetas
-- [ ] Contenedor de camisetas
-<!-- priority: high -->
-<!-- workload: hard -->
-<!-- assignee: Roberto -->
-
 #### Esqueleto de la página
 <!-- id: task-1790767722113-10 -->
-<!-- group:  -->
 Es la estructura general, con cabecera, cuerpo y pie
 - [ ] Cabecera
 - [ ] Pie
@@ -29,7 +17,6 @@ Es la estructura general, con cabecera, cuerpo y pie
 
 #### Detalle
 <!-- id: task-1790768273325-23 -->
-<!-- group:  -->
 Muestra la foto por delante y por detras. Además se puede seleccionar la talla
 - [ ] Dibujar el detalle con foto, etc
 - [ ] Emisión evento: añadir_al_carrito
@@ -39,7 +26,6 @@ Muestra la foto por delante y por detras. Además se puede seleccionar la talla
 
 #### Carrito
 <!-- id: task-1790768715118-51 -->
-<!-- group:  -->
 Tiene una lista de camisetas que vamos a comprar
 - [ ] Mostrar lista de camisetas y precio total
 - [ ] Botón eliminación de camisetas
@@ -51,3 +37,14 @@ Tiene una lista de camisetas que vamos a comprar
 ## In Progress
 
 ## Done
+
+### 2DAW
+
+#### Catalogo
+<!-- id: task-1790767536875-0 -->
+Muestra el frontal de 6 camisetas
+- [ ] Cards para las fotos de las camisetas
+- [ ] Contenedor de camisetas
+<!-- priority: high -->
+<!-- workload: hard -->
+<!-- assignee: Roberto -->
