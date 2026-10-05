@@ -143,75 +143,100 @@ let camisetas = [
 </template>
 
 <style scope>
-.info{
-  display: flex;
 
+/* Configuración general */
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
-    
-    article{
-        width: 50%;
-        margin: 2em;
-        box-shadow: 10px 10px;
-        border-radius: lem;
-        background-color: antiquewhite;
-        float: left;
-    }
 
-    .catalogo{
-        clear: both;
-    }
-     img{
-        width: 70px;
-        height: 50px;
-     }
+/* Información dentro de las tarjetas */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+/* Catálogo */
+.catalogo {
+    clear: both;
+}
 
+/* Contenedor de los modelos */
 .modelos {
-  max-width: 1200px;
-  margin: auto;
-  padding: 70px 24px;
-  text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
+/* Rejilla de productos */
 .rejilla {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
+/* Tarjetas */
 article {
-  background: #f1f5f9;
-  border-radius: 14px;
-  padding: 24px;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Efecto al pasar el ratón */
 article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.14);
 }
 
+/* Imagen de cada camiseta */
 article img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
 }
 
+/* Títulos */
 article h2 {
-  margin: 16px 0 8px;
-  color: #1e293b;
+    margin: 16px 0 8px;
+    color: #172033;
+    font-size: 22px;
 }
 
+/* Texto */
 article p {
-  color: #64748b;
-  line-height: 1.5;
+    margin: 8px 0;
+    color: #64748b;
+    line-height: 1.5;
 }
-.cliclable{
-  cursor: pointer;
+
+/* Elementos que se puedan pulsar */
+.cliclable {
+    cursor: pointer;
 }
+
+/* Precio */
+.precio {
+    font-weight: bold;
+    color: #172033;
+}
+
+/* Nombre de la camiseta */
+.camiseta {
+    font-size: 18px;
+    color: #172033;
+}
+
+
 
 
 </style>
