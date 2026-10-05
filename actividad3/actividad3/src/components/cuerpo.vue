@@ -18,12 +18,96 @@ const total = ref(0)
 const visible = ref(false)
 const camisetaSeleccionada = ref(null);
 let camisetas = [
-  { nombre: "stwd", precio: 15, imgs: [stwd, stwd_vuelta]},
-  {nombre: "Nike", precio: 25, imgs: [nike, nike_vuelta]},
-  {nombre: "Adidas", precio: 35, imgs: [adidas, adidas_vuelta]},
-  {nombre: "Under Armour", precio: 5, imgs: [under_armour, under_armour_vuelta]},
-  {nombre: "John Smith", precio: 150, imgs: [john_smith, john_smith_vuelta]},
-  {nombre: "Fila", precio: 10, imgs: [fila, fila_vuelta]}
+  {
+    nombre: "stwd",
+    precio: 15,
+    imgs: [
+      stwd,
+      stwd_vuelta
+    ],
+    tallas: {
+      xs: 1,
+      s: 2,
+      m: 0,
+      l: 8,
+      xl: 0
+    }
+  },
+  {
+    nombre: "Nike",
+    precio: 25,
+    imgs: [
+      nike,
+      nike_vuelta
+    ],
+    tallas: {
+      xs: 3,
+      s: 5,
+      m: 2,
+      l: 0,
+      xl: 4
+    }
+  },
+  {
+    nombre: "Adidas",
+    precio: 35,
+    imgs: [
+      adidas,
+      adidas_vuelta
+    ],
+    tallas: {
+      xs: 0,
+      s: 6,
+      m: 4,
+      l: 3,
+      xl: 1
+    }
+  },
+  {
+    nombre: "Under Armour",
+    precio: 5,
+    imgs: [
+      under_armour,
+      under_armour_vuelta
+    ],
+    tallas: {
+      xs: 2,
+      s: 0,
+      m: 7,
+      l: 5,
+      xl: 3
+    }
+  },
+  {
+    nombre: "John Smith",
+    precio: 150,
+    imgs: [
+      john_smith,
+      john_smith_vuelta
+    ],
+    tallas: {
+      xs: 1,
+      s: 2,
+      m: 3,
+      l: 1,
+      xl: 0
+    }
+  },
+  {
+    nombre: "Fila",
+    precio: 10,
+    imgs: [
+      fila,
+      fila_vuelta
+    ],
+    tallas: {
+      xs: 4,
+      s: 3,
+      m: 0,
+      l: 6,
+      xl: 2
+    }
+  }
 ]
 </script>
 <template>

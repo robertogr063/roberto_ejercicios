@@ -27,15 +27,6 @@ Tiene una lista de camisetas que vamos a comprar
 
 ## In Progress
 
-#### Detalle
-<!-- id: task-1790768273325-23 -->
-Muestra la foto por delante y por detras. Además se puede seleccionar la talla
-- [ ] Dibujar el detalle con foto, etc
-- [ ] Emisión evento: añadir_al_carrito
-- [ ] Captura de evento mostrarCamiseta
-- [ ] Reflejar la disponibilidad de camisetas por talla
-<!-- workload: hard -->
-
 ## Done
 
 ### 2DAW
@@ -48,3 +39,13 @@ Muestra el frontal de 6 camisetas
 <!-- priority: high -->
 <!-- workload: hard -->
 <!-- assignee: Roberto -->
+
+#### Detalle
+<!-- id: task-1790768273325-23 -->
+<!-- group:  -->
+Muestra la foto por delante y por detras. Además se puede seleccionar la talla
+- [ ] Dibujar el detalle con foto, etc
+- [ ] Emisión evento: añadir_al_carrito
+- [ ] Captura de evento mostrarCamiseta
+- [ ] Reflejar la disponibilidad de camisetas por talla
+<!-- workload: hard -->

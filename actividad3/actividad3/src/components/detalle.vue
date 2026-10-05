@@ -22,11 +22,11 @@
             </div>
 
             <select>
-                <option>XS</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+                <template v-for="(disponibilidad, talla) in camiseta.tallas" :key="talla">
+                    <option v-if="disponibilidad > 0">
+                        {{ talla.toUpperCase() }} - {{ disponibilidad }} disponibles
+                    </option>
+                </template>
             </select>
 
             <button @click="$emit('cerrar')">Cerrar</button>
