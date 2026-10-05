@@ -1,21 +1,29 @@
 <script setup>
 import { ref } from 'vue'
+import detalle from './detalle.vue'
 import stwd from '../assets/stwd.jpg'
 import nike from '../assets/nike.jpg'
 import adidas from '../assets/adidas.jpg'
 import under_armour from '../assets/under_armour.avif'
 import john_smith from '../assets/john_smith.avif'
 import fila from '../assets/fila.jpg'
+import stwd_vuelta from '../assets/stwd_vuelta.webp'
+import nike_vuelta from '../assets/nike_vuelta.avif'
+import adidas_vuelta from '../assets/adidas_vuelta.avif'
+import under_armour_vuelta from '../assets/under_armour_vuelta.avif'
+import john_smith_vuelta from '../assets/john_smith_vuelta.webp'
+import fila_vuelta from '../assets/fila_vuelta.avif'
 
-const count = ref(0)
 const total = ref(0)
+const visible = ref(false)
+const camisetaSeleccionada = ref(null);
 let camisetas = [
-  { nombre: "stwd", precio: 15, imagen: stwd},
-  {nombre: "Nike", precio: 25, imagen: nike},
-  {nombre: "Adidas", precio: 35, imagen: adidas},
-  {nombre: "Under Armour", precio: 5, imagen: under_armour},
-  {nombre: "John Smith", precio: 150, imagen: john_smith},
-  {nombre: "Fila", precio: 10, imagen: fila}
+  { nombre: "stwd", precio: 15, imgs: [stwd, stwd_vuelta]},
+  {nombre: "Nike", precio: 25, imgs: [nike, nike_vuelta]},
+  {nombre: "Adidas", precio: 35, imgs: [adidas, adidas_vuelta]},
+  {nombre: "Under Armour", precio: 5, imgs: [under_armour, under_armour_vuelta]},
+  {nombre: "John Smith", precio: 150, imgs: [john_smith, john_smith_vuelta]},
+  {nombre: "Fila", precio: 10, imgs: [fila, fila_vuelta]}
 ]
 </script>
 <template>
@@ -24,19 +32,30 @@ let camisetas = [
 
     <article v-for="camiseta in camisetas" :key="camiseta.nombre" class="precio_wrap">
       <p>
-        <img :src="camiseta.imagen" alt=""> 
+        <img class="cliclable"
+          :src="camiseta.imgs[0]"
+          alt=""
+          @click="camisetaSeleccionada = camiseta;visible = true"
+        >
       </p>
       <div class="info">
         <strong class="camiseta">{{ camiseta.nombre }}</strong>
         <span class="precio">: {{ camiseta.precio }}</span>
       </div>
-      <button type="button" class="counter" @click="total += camiseta.precio">
+      <button type="button" class="counter" @click="total += camiseta.precio" >
+        
         Añadir
       </button>
     </article>
 
 
   </div>
+  <!--Modal-->
+  <detalle
+    :visible="visible"
+    :camiseta="camisetaSeleccionada"
+    @cerrar="visible = false"
+  />
 </template>
 
 <style scope>
@@ -106,5 +125,9 @@ article p {
   color: #64748b;
   line-height: 1.5;
 }
+.cliclable{
+  cursor: pointer;
+}
+
 
 </style>

@@ -15,15 +15,6 @@ Es la estructura general, con cabecera, cuerpo y pie
 <!-- priority: high -->
 <!-- assignee: Roberto -->
 
-#### Detalle
-<!-- id: task-1790768273325-23 -->
-Muestra la foto por delante y por detras. Además se puede seleccionar la talla
-- [ ] Dibujar el detalle con foto, etc
-- [ ] Emisión evento: añadir_al_carrito
-- [ ] Captura de evento mostrarCamiseta
-- [ ] Reflejar la disponibilidad de camisetas por talla
-<!-- workload: hard -->
-
 #### Carrito
 <!-- id: task-1790768715118-51 -->
 Tiene una lista de camisetas que vamos a comprar
@@ -35,6 +26,15 @@ Tiene una lista de camisetas que vamos a comprar
 <!-- assignee: Roberto -->
 
 ## In Progress
+
+#### Detalle
+<!-- id: task-1790768273325-23 -->
+Muestra la foto por delante y por detras. Además se puede seleccionar la talla
+- [ ] Dibujar el detalle con foto, etc
+- [ ] Emisión evento: añadir_al_carrito
+- [ ] Captura de evento mostrarCamiseta
+- [ ] Reflejar la disponibilidad de camisetas por talla
+<!-- workload: hard -->
 
 ## Done
 
