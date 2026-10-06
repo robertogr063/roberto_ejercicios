@@ -6,15 +6,6 @@
 
 ## To Do
 
-#### Esqueleto de la página
-<!-- id: task-1790767722113-10 -->
-Es la estructura general, con cabecera, cuerpo y pie
-- [ ] Cabecera
-- [ ] Pie
-- [ ] Estructura contenedora del esqueleto
-<!-- priority: high -->
-<!-- assignee: Roberto -->
-
 #### Carrito
 <!-- id: task-1790768715118-51 -->
 Tiene una lista de camisetas que vamos a comprar
@@ -38,6 +29,16 @@ Muestra el frontal de 6 camisetas
 - [ ] Contenedor de camisetas
 <!-- priority: high -->
 <!-- workload: hard -->
+<!-- assignee: Roberto -->
+
+#### Esqueleto de la página
+<!-- id: task-1790767722113-10 -->
+<!-- group:  -->
+Es la estructura general, con cabecera, cuerpo y pie
+- [ ] Cabecera
+- [ ] Pie
+- [ ] Estructura contenedora del esqueleto
+<!-- priority: high -->
 <!-- assignee: Roberto -->
 
 #### Detalle

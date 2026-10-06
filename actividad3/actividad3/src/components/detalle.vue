@@ -9,7 +9,16 @@
             default: null
     }
     })
-    defineEmits(['cerrar'])
+    const emit = defineEmits(['cerrar', 'añadir'])
+
+    function anadirCamiseta(nombre, talla, precio){
+        let camisetaCarrito = {
+            nombre : nombre,
+            talla: talla,
+            precio: precio
+        }
+        emit('añadir', camisetaCarrito)
+    }
 </script>
 
 <template>
@@ -20,17 +29,21 @@
                 <img :src="camiseta.imgs[0]" alt="">
                 <img :src="camiseta.imgs[1]" alt="">
             </div>
+            Precio: {{ camiseta.precio }}
 
-            <select>
-                <template v-for="(disponibilidad, talla) in camiseta.tallas" :key="talla">
-                    <option v-if="disponibilidad > 0">
-                        {{ talla.toUpperCase() }} - {{ disponibilidad }} disponibles
+            <select v-model="talla">
+                <template v-for="(disponibilidad, tallaDisponible) in camiseta.tallas" :key="tallaDisponible">
+                    <option v-if="disponibilidad > 0" :value="tallaDisponible">
+                        {{ tallaDisponible.toUpperCase() }} - {{ disponibilidad }} disponibles
                     </option>
                 </template>
             </select>
 
             <button @click="$emit('cerrar')">Cerrar</button>
-            <button @click="$emit('añadir')">Añadir al carrito</button>
+
+            <button @click="anadirCamiseta(camiseta.nombre, talla, camiseta.precio)">
+                Añadir al carrito
+            </button>
 
         </article>
     </div>

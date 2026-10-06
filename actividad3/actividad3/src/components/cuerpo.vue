@@ -17,6 +17,8 @@ import fila_vuelta from '../assets/fila_vuelta.avif'
 const total = ref(0)
 const visible = ref(false)
 const camisetaSeleccionada = ref(null);
+
+let carrito = [];
 let camisetas = [
   {
     nombre: "stwd",
@@ -109,6 +111,13 @@ let camisetas = [
     }
   }
 ]
+  function anadirAlCarrito(camisetaCarrito) {
+    if(camisetaCarrito.talla !== undefined){
+        console.log(camisetaCarrito)
+    }
+    
+}
+
 </script>
 <template>
   <div>Total {{ total }}</div>
@@ -124,7 +133,6 @@ let camisetas = [
       </p>
       <div class="info">
         <strong class="camiseta">{{ camiseta.nombre }}</strong>
-        <span class="precio">: {{ camiseta.precio }}</span>
       </div>
       <button type="button" class="counter" @click="total += camiseta.precio" >
         
@@ -139,6 +147,8 @@ let camisetas = [
     :visible="visible"
     :camiseta="camisetaSeleccionada"
     @cerrar="visible = false"
+    @añadir="anadirAlCarrito"
+    
   />
 </template>
 
