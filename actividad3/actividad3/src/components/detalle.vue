@@ -15,7 +15,8 @@
         let camisetaCarrito = {
             nombre : nombre,
             talla: talla,
-            precio: precio
+            precio: precio,
+            cantidad: 1
         }
         emit('añadir', camisetaCarrito)
     }

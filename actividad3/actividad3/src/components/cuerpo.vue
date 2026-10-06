@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import detalle from './detalle.vue'
+import carrito from './carrito.vue'
 import stwd from '../assets/stwd.jpg'
 import nike from '../assets/nike.jpg'
 import adidas from '../assets/adidas.jpg'
@@ -16,9 +17,10 @@ import fila_vuelta from '../assets/fila_vuelta.avif'
 
 const total = ref(0)
 const visible = ref(false)
-const camisetaSeleccionada = ref(null);
+const camisetaSeleccionada = ref(null)
+const carritoVisible = ref(false)
 
-let carrito = [];
+const productos = ref([]);
 let camisetas = [
   {
     nombre: "stwd",
@@ -112,15 +114,24 @@ let camisetas = [
   }
 ]
   function anadirAlCarrito(camisetaCarrito) {
-    if(camisetaCarrito.talla !== undefined){
-        console.log(camisetaCarrito)
+    for(let producto of productos.value){
+      if (producto.nombre === camisetaCarrito.nombre && producto.talla === camisetaCarrito.talla){
+        producto.cantidad++;
+        return;
+      }
     }
-    
+    productos.value.push(camisetaCarrito);
 }
+
+  function eliminarProducto(productoEliminar){
+    
+  }
 
 </script>
 <template>
-  <div>Total {{ total }}</div>
+  <button class="boton-carrito" @click="carritoVisible=true">
+    🛒
+</button>
   <div class="modelos rejilla">
 
     <article v-for="camiseta in camisetas" :key="camiseta.nombre" class="precio_wrap">
@@ -150,6 +161,11 @@ let camisetas = [
     @añadir="anadirAlCarrito"
     
   />
+  <carrito
+    :visible="carritoVisible"
+    :productos="productos"
+    @cerrar="carritoVisible=false"
+  />
 </template>
 
 <style scope>
@@ -159,6 +175,35 @@ html,
 body {
     margin: 0;
     padding: 0;
+}
+
+.boton-carrito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f59e0b;
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.2s, background 0.2s;
+
+    z-index: 500;
+}
+
+.boton-carrito:hover {
+    background: #d97706;
+    transform: scale(1.08);
 }
 
 /* Información dentro de las tarjetas */
