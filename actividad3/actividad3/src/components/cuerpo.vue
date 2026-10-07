@@ -21,7 +21,7 @@ const camisetaSeleccionada = ref(null)
 const carritoVisible = ref(false)
 
 const productos = ref([]);
-let camisetas = [
+let camisetas = ref([
   {
     nombre: "stwd",
     precio: 15,
@@ -112,24 +112,47 @@ let camisetas = [
       xl: 2
     }
   }
-]
+])
   function anadirAlCarrito(camisetaCarrito) {
+    if(camisetaCarrito.talla === undefined){
+      return;
+    }
+
+    for(let camiseta of camisetas.value){
+        if(camiseta.nombre === camisetaCarrito.nombre){
+
+            if(camiseta.tallas[camisetaCarrito.talla] <= 0){
+                return;
+            }
+
+            break;
+        }
+    }
+
     for(let producto of productos.value){
       if (producto.nombre === camisetaCarrito.nombre && producto.talla === camisetaCarrito.talla){
         producto.cantidad++;
         total+=producto.precio;
+        eliminarStock(camisetaCarrito)
         return;
       }
     }
     productos.value.push(camisetaCarrito);
     total+=camisetaCarrito.precio;
+    eliminarStock(camisetaCarrito)
 }
 
-  function eliminarEnStock(nombre, talla){
-    for(let camiseta of camisetas.value){
-      
+function eliminarStock(camisetaCarrito) {
+
+    for (let camiseta of camisetas.value) {
+        if (camiseta.nombre === camisetaCarrito.nombre) {
+            console.log(camiseta.tallas[camisetaCarrito.talla]);
+            camiseta.tallas[camisetaCarrito.talla]--;
+            return;
+        }
     }
-  }
+}
+
 
 </script>
 <template>
