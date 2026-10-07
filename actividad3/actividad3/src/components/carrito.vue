@@ -8,6 +8,10 @@
     productos: {
       type: Array,
       default: () => []
+    },
+    total: {
+      type: Number,
+      default: 0
     }
   })
   defineEmits(['cerrar'])
@@ -35,7 +39,7 @@
       </div>
 
       <div class="total">
-        <span>Total</span>
+        <span>Total: {{total}}</span>
         <!--<strong>{{ precioTotal }} €</strong>--->
       </div>
       <button class="comprar">Finalizar compra</button>

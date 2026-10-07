@@ -15,7 +15,7 @@ import under_armour_vuelta from '../assets/under_armour_vuelta.avif'
 import john_smith_vuelta from '../assets/john_smith_vuelta.webp'
 import fila_vuelta from '../assets/fila_vuelta.avif'
 
-const total = ref(0)
+let total = 0
 const visible = ref(false)
 const camisetaSeleccionada = ref(null)
 const carritoVisible = ref(false)
@@ -117,14 +117,18 @@ let camisetas = [
     for(let producto of productos.value){
       if (producto.nombre === camisetaCarrito.nombre && producto.talla === camisetaCarrito.talla){
         producto.cantidad++;
+        total+=producto.precio;
         return;
       }
     }
     productos.value.push(camisetaCarrito);
+    total+=camisetaCarrito.precio;
 }
 
-  function eliminarProducto(productoEliminar){
-    
+  function eliminarEnStock(nombre, talla){
+    for(let camiseta of camisetas.value){
+      
+    }
   }
 
 </script>
@@ -145,10 +149,7 @@ let camisetas = [
       <div class="info">
         <strong class="camiseta">{{ camiseta.nombre }}</strong>
       </div>
-      <button type="button" class="counter" @click="total += camiseta.precio" >
-        
-        Añadir
-      </button>
+    
     </article>
 
 
@@ -164,7 +165,9 @@ let camisetas = [
   <carrito
     :visible="carritoVisible"
     :productos="productos"
+    :total="total"
     @cerrar="carritoVisible=false"
+
   />
 </template>
 
