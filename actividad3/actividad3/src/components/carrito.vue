@@ -40,7 +40,6 @@
 
       <div class="total">
         <span>Total: {{total}}</span>
-        <!--<strong>{{ precioTotal }} €</strong>--->
       </div>
       <button class="comprar">Finalizar compra</button>
     </article>

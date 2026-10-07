@@ -12,13 +12,7 @@
     const emit = defineEmits(['cerrar', 'añadir'])
 
     function anadirCamiseta(nombre, talla, precio){
-        let camisetaCarrito = {
-            nombre : nombre,
-            talla: talla,
-            precio: precio,
-            cantidad: 1
-        }
-        emit('añadir', camisetaCarrito)
+        emit('añadir', {nombre : nombre,talla: talla,precio: precio,cantidad: 1})
     }
 </script>
 

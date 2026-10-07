@@ -28,7 +28,6 @@
 
         <div class="pie-final">
             <span>© 2026 Manuel. Todos los derechos reservados.</span>
-            <span>Hecho con estilo.</span>
         </div>
     </footer>
 </template>

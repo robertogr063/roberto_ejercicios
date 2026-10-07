@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from 'vue'
+
 import detalle from './detalle.vue'
 import carrito from './carrito.vue'
+
 import stwd from '../assets/stwd.jpg'
 import nike from '../assets/nike.jpg'
 import adidas from '../assets/adidas.jpg'
