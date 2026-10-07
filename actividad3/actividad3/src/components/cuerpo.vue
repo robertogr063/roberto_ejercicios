@@ -23,7 +23,7 @@ const camisetaSeleccionada = ref(null)
 const carritoVisible = ref(false)
 
 const productos = ref([]);
-let camisetas = ref([
+const camisetas = ref([
   {
     nombre: "stwd",
     precio: 15,
@@ -115,6 +115,24 @@ let camisetas = ref([
     }
   }
 ])
+    
+
+  function eliminarDelCarrito(producto) {
+
+    for (let camiseta of camisetas.value) {
+        if (camiseta.nombre === producto.nombre) {
+            camiseta.tallas[producto.talla] += producto.cantidad;
+            break;
+        }
+    }
+
+    total -= producto.precio * producto.cantidad;
+
+    let indice = productos.value.indexOf(producto);
+    productos.value.splice(indice, 1);
+    }
+
+
   function anadirAlCarrito(camisetaCarrito) {
     if(camisetaCarrito.talla === undefined){
       return;
