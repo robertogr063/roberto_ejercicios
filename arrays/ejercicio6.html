@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let daw = [7.5, 8.2, 6.4, 9.1, 5.8, 8.3, 7.2, 10.0, 6.7, 9.4];
+        let dam = [8.1, 7.6, 9.3, 6.5, 8.7, 5.4, 9.0, 7.8, 10.0, 8.2];
+        let asir = [6.3, 7.4, 8.6, 5.2, 9.1, 6.8, 7.5, 8.3, 4.9, 9.6];
+        let smr1 = [9.2, 8.5, 7.3, 6.1, 9.4, 8.7, 10.0, 7.6, 6.8, 8.9];
+        let smr2 = [5.5, 6.4, 7.8, 8.2, 6.7, 9.1, 7.3, 5.8, 8.6, 6.2];
+
+        function rellenarNotas(grupo){
+            let longitud = Math.floor(Math.random * 30) * 10;
+            
+        }
+
+        function calcularNotaMedia(grupo){
+            let notaTotal = 0;
+            let numeroAlumnos = grupo.length;
+            for(let i = 0; i<numeroAlumnos; i++){
+                notaTotal+=grupo[i];
+            }
+            let media = notaTotal/numeroAlumnos;
+            console.log(media);
+            return media;
+        }
+        let notaTotalDaw = calcularNotaMedia(daw);
+        let notaTotalDam = calcularNotaMedia(dam);
+        let notaTotalAsir = calcularNotaMedia(asir);
+        let notaTotalSmr1 = calcularNotaMedia(smr1);
+        let notaTotalSmr2 = calcularNotaMedia(smr2);
+
+        alert(notaTotalDaw);
+        alert(notaTotalDam);
+        alert(notaTotalAsir);
+        alert(notaTotalSmr1);
+        alert(notaTotalSmr2);
+    </script>
+</body>
+</html>
